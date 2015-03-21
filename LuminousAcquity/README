@@ -1,0 +1,27 @@
+IDependencies:-
+Boost version 1.47
+Boost 1.47 must be installed and compiled. See www.boost.org for installing and compiling Boost.
+
+Makefile:-
+Set BOOST_ROOT to point to your Boost installation.
+
+Environment Variables:-
+On Linux:
+set the envvar BOOST_ROOT to the same location as was defined in the Makefile.
+Set the envvar LD_LIBRARY_PATH to $BOOST_ROOT/lib
+
+On MacOS X:
+set the envvar BOOST_ROOT to the same location as was defined in the Makefile.
+set the envvar DYLD_LIBRARY_PATH to include $BOOST_ROOT/lib
+
+If $BOOST_ROOT/lib is not included in DYLD_LIBRARY_PATH, then the following error 
+will occur on running the application:
+dyld: Library not loaded: libboost_program_options.dylib
+  Referenced from: /Users/nitish/Documents/Learning/lumacu/./query_option_chains
+    Reason: image not found
+    Trace/BPT trap
+
+
+Miscellaneous:-
+Makefile:
+set BACKUPDIR to point to the appropriate location.
